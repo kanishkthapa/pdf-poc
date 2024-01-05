@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PDF POC jspdf</title>
+  </head>
+  <body></body>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.4.1/jspdf.debug.js"
+  >
+    const { jsPDF } = window.jspdf;
+  </script>
+  <script>
+    var doc = new jspdf();
+
+    doc.text("Sample Text", 20, 20);
+    doc.save("jspdfResult.pdf");
+  </script>
+</html>
