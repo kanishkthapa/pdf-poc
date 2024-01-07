@@ -7521,7 +7521,10 @@
         }
 
         .toc-paging {
+            justify-content: right;
             text-align: right;
+            float: right;
+            padding-right: 20px;
         }
 
         .part-heading {
@@ -7702,6 +7705,11 @@
             orphans: 2;
             widows: 2;
             text-align: justify
+        }
+
+        .fill-dots {
+            background: linear-gradient(to right, transparent 0%, transparent calc(100% - 30px), #000 calc(100% - 30px), #000 100%);
+            display: inline-block;
         }
     </style>
 </head>
@@ -7991,7 +7999,7 @@
                 <p class="c46 c48"><span class="c3">$ {{this.drone_value}}</span></p>
             </td>
             <td class="c107" colspan="2" rowspan="1">
-                <p class="c46 c48"><span class="c3">&nbsp; &nbsp; &nbsp;</span></p>
+                <p class="c46 c48"><span class="c3">$ {{this.deductible_value}}</span></p>
             </td>
         </tr>
         {{/each}}
@@ -8090,83 +8098,220 @@
 
 <div class="page">
     <div style="padding-top: 50px;">
-    <div class="part-heading" style="font-size: 20px;">TABLE OF CONTENTS</div>
-    <p>
-        <span class="c3">PART 1 - LIABILITY COVERAGES</span>
-        <span class="toc-paging">2</span>
-    </p>
-    <p class="c14"><span class="c40 c10">Coverage 1 - Scheduled
-            Aircraft</span>
-            <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2</span>
+        <div class="part-heading" style="font-size: 20px;">TABLE OF CONTENTS</div>
+        <p>
+            <span class="c3">PART 1 - LIABILITY COVERAGES</span>
+            <span class="toc-paging">2</span>
+        </p>
+
+        <div style="padding-left: 15px;">
+            <p style="padding-top: 10px;">
+                <span class="c40 c10">Coverage 2 - Use of Non-Owned Aircraft</span>
+                <span class="toc-paging">2</span>
             </p>
-    <p class="c14"><span class="c40 c10">Coverage 2 - Use of Non-Owned
-            Aircraft&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2</span></p>
-    <p class="c14"><span class="c40 c10">Coverage 3 - Automatic Liability Insurance for Newly Acquired
-            Aircraft&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2</span></p>
-    <p class="c14"><span class="c40 c10">Coverage 4 - Premises
-            Liability&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3</span></p>
-    <p class="c14"><span class="c40 c10">Coverage 5 &ndash; Fire Legal
-            Liability&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3</span></p>
-    <p class="c14"><span class="c40 c10">Coverage 6 - Sale of Aircraft and Aircraft Products and
-            Services&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3</span></p>
-    <p class="c14"><span class="c40 c10">Coverage 7 - Contractual
-            Agreements&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3</span></p>
-    <p class="c14"><span class="c40 c10">Coverage 8 - Personal
-            Injury&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4</span></p>
-    <p><span class="c3">PART 2 - DEFENSE, SETTLEMENT AND SUPPLEMENTARY PAYMENTS OF LIABILITY
-            CLAIMS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4</span></p>
-    <p><span class="c3">PART 3 - PHYSICAL DAMAGE
-            COVERAGES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5</span></p>
-    <p class="c14"><span class="c3">Coverage 9 - Physical Damage to Scheduled Aircraft</span><span
-            class="c40 c10">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5</span></p>
-    <p><span class="c3">PART 4 - ADDITIONAL
-            COVERAGES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5</span></p>
-    <p class="c14"><span class="c40 c10">Coverage 10 &ndash; Unexcpeted Landing
-            Event&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5</span></p>
-    <p><span class="c3">PART 5 - MEDICAL EXPENSES&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;...5</span>
-    </p>
-    <p class="c14"><span class="c40 c10">Coverage 11 - Medical
-            Payments&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5</span></p>
-    <p ><span class="c3">PART 6 - POLICY DEFINITIONS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6</span>
-    </p>
-    <p ><span class="c3">PART 7 - EXCLUSIONS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8</span></p>
-    <p ><span class="c3">PART 8 - LIMIT OF THE COMPANY&rsquo;S
-            LIABILITY&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;13</span></p>
-    <p class="c14"><span class="c40 c10">Other Insurance&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;13</span></p>
-    <p class="c14"><span class="c40 c10">Total Liability for PART 1 - Liability
-            Coverages&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;13</span></p>
-    <p class="c14"><span class="c40 c10">Total Liability for PART 3 - Physical Damage
-            Coverages&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;13</span></p>
-    <p class="c14"><span class="c40 c10">Total Liability for PART 4 - Additional
-            Coverages&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;14</span></p>
-    <p class="c14"><span class="c40 c10">Severability of
-            Interests&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;14</span></p>
-    <p class="c14"><span class="c40 c10">Two or More Aircraft Insured by this
-            Policy&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;14</span></p>
-    <p ><span class="c3">PART 9 - NOTICE OF CLAIMS AND OTHER DUTIES OF AN
-            INSURED&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="c40 c10">14</span></p>
-    <p ><span class="c3">PART 10 - OTHER CONDITIONS OF
-            INSURANCE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="c40 c10">15</span></p>
-    <p class="c14"><span class="c40 c10">Changing the Policy&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;15</span>
-    </p>
-    <p class="c14"><span class="c40 c10">Inspection&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;15</span></p>
-    <p class="c14"><span class="c40 c10">The Company&rsquo;s Rights of
-            Recovery&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;15</span></p>
-    <p class="c14"><span class="c40 c10">This Policy Conforms to State
-            Law&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;15</span></p>
-    <p class="c14"><span class="c40 c10">Transfer of the Policy to
-            Others&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;15</span></p>
-    <p class="c14"><span class="c40 c10">Cancellation and Non-Renewal of this
-            Policy&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;16</span></p>
-    <p class="c14"><span class="c40 c10">Financial Responsibility
-            Laws&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;16</span></p>
-    <p class="c14"><span class="c10 c40">Action Against the
-            Company&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;16</span></p>
-    <p class="c14"><span class="c40 c10">Cross Liability&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;17</span></p>
-    <p class="c14"><span class="c40 c10">Entire Agreement&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;17</span></p>
-    <p class="c14"><span class="c40 c10">Sanctions Clause&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;17</span></p>
+            <p style="padding-top: 10px;">
+                <span class="c40 c10">Coverage 3 - Automatic Liability Insurance for Newly Acquired Aircraft</span>
+                <span class="toc-paging">2</span>
+            </p>
+            <p style="padding-top: 10px;">
+                <span class="c40 c10">Coverage 4 - Premises Liability</span>
+                <span class="toc-paging">3</span>
+            </p>
+            <p style="padding-top: 10px;">
+                <span class="c40 c10">Coverage 5 – Fire Legal Liability</span>
+                <span class="toc-paging">3</span>
+            </p>
+            <p style="padding-top: 10px;">
+                <span class="c40 c10">Coverage 6 - Sale of Aircraft and Aircraft Products and Services </span>
+                <span class="toc-paging">3</span>
+            </p>
+            <p style="padding-top: 10px;">
+                <span class="c40 c10">Coverage 7 - Contractual Agreements</span>
+                <span class="toc-paging">3</span>
+            </p>
+            <p style="padding-top: 10px;">
+                <span class="c40 c10">Coverage 8 - Personal Injury</span>
+                <span class="toc-paging">8</span>
+            </p>
+        </div>
+        
+
+        <p style="padding-top: 10px;">
+            <span class="c3">PART 2 - DEFENSE, SETTLEMENT AND SUPPLEMENTARY PAYMENTS OF LIABILITY CLAIMS</span>
+            <span class="toc-paging">4</span>
+        </p>
+        <p style="padding-top: 10px;">
+            <span class="c3">PART 3 - PHYSICAL DAMAGE COVERAGES</span>
+            <span class="toc-paging">5</span>
+        </p>
+
+        <div style="padding-left: 15px;">
+            <p style="padding-top: 10px; padding-bottom: 10px;">
+                <span class="c40 c10">Coverage 9 - Physical Damage to Scheduled Aircraft</span>
+                <span class="toc-paging">5</span>
+            </p>
+        </div>
+
+
+        <p>
+            <span class="c3" style="padding-top: 10px;">PART 4 - ADDITIONAL</span>
+            <span class="toc-paging">5</span>
+        </p>
+        <div style="padding-left: 15px;">
+            <p style="padding-top: 10px; padding-bottom: 10px;">
+                <span class="c40 c10">Coverage 10 – Unexcpeted Landing Event</span>
+                <span class="toc-paging">5</span>
+            </p>
+        </div>
+
+
+        <p>
+            <span class="c3" style="padding-top: 10px;">PART 5 - MEDICAL EXPENSES </span>
+            <span class="toc-paging">5</span>
+        </p>
+
+        <div style="padding-left: 15px;">
+            <p style="padding-top: 10px; padding-bottom: 10px;">
+                <span class="c40 c10">Coverage 11 – Medical Payments</span>
+                <span class="toc-paging">5</span>
+            </p>
+        </div>
+
+
+        <p style="padding-top: 10px;">
+            <span class="c3" >PART 6 - POLICY DEFINITIONS</span>
+            <span class="toc-paging">6</span>
+        </p>
+
+        
+        <p style="padding-top: 10px;">
+            <span class="c3" >PART 7 - EXCLUSIONS</span>
+            <span class="toc-paging">8</span>
+        </p>
+
+        <p style="padding-top: 10px;">
+            <span class="c3" >PART 8 - LIMIT OF THE COMPANY’S LIABILITY </span>
+            <span class="toc-paging">13</span>
+        </p>
+
+        <div style="padding-left: 15px;">
+            <p style="padding-top: 10px;">
+                <span class="c40 c10">Other Insurance</span>
+                <span class="toc-paging">13</span>
+            </p>
+        </div>
+        <div style="padding-left: 15px;">
+            <p style="padding-top: 10px;">
+                <span class="c40 c10">Total Liability for PART 1 - Liability Coverages</span>
+                <span class="toc-paging">13</span>
+            </p>
+        </div>
+        <div style="padding-left: 15px;">
+            <p style="padding-top: 10px;">
+                <span class="c40 c10">Total Liability for PART 3 - Physical Damage Coverages </span>
+                <span class="toc-paging">13</span>
+            </p>
+        </div>
+        <div style="padding-left: 15px;">
+            <p style="padding-top: 10px;">
+                <span class="c40 c10">Total Liability for PART 4 - Additional Coverages</span>
+                <span class="toc-paging">14</span>
+            </p>
+        </div>
+        <div style="padding-left: 15px;">
+            <p style="padding-top: 10px;">
+                <span class="c40 c10">Severability of Interests</span>
+                <span class="toc-paging">14</span>
+            </p>
+        </div>
+        <div style="padding-left: 15px;">
+            <p style="padding-top: 10px;">
+                <span class="c40 c10">Two or More Aircraft Insured by this Policy</span>
+                <span class="toc-paging">14</span>
+            </p>
+        </div>
+
+        <p style="padding-top: 10px;">
+            <span class="c3">PART 9 - NOTICE OF CLAIMS AND OTHER DUTIES OF AN INSURED</span>
+            <span class="toc-paging">14</span>
+        </p>
+
+        <p style="padding-top: 10px;">
+            <span class="c3">PART 10 - OTHER CONDITIONS OF INSURANCE</span>
+            <span class="toc-paging">15</span>
+        </p>
+
+        <div style="padding-left: 15px;">
+            <p style="padding-top: 10px;">
+                <span class="c40 c10">Changing the Policy</span>
+                <span class="toc-paging">15</span>
+            </p>
+        </div>
+        <div style="padding-left: 15px;">
+            <p style="padding-top: 10px;">
+                <span class="c40 c10">Inspection</span>
+                <span class="toc-paging">15</span>
+            </p>
+        </div>
+        <div style="padding-left: 15px;">
+            <p style="padding-top: 10px;">
+                <span class="c40 c10">The Company’s Rights of Recovery</span>
+                <span class="toc-paging">15</span>
+            </p>
+        </div>
+        <div style="padding-left: 15px;">
+            <p style="padding-top: 10px;">
+                <span class="c40 c10">This Policy Conforms to State Law</span>
+                <span class="toc-paging">15</span>
+            </p>
+        </div>
+        <div style="padding-left: 15px;">
+            <p style="padding-top: 10px;">
+                <span class="c40 c10">Transfer of the Policy to Others</span>
+                <span class="toc-paging">15</span>
+            </p>
+        </div>
+        <div style="padding-left: 15px;">
+            <p style="padding-top: 10px;">
+                <span class="c40 c10">Cancellation and Non-Renewal of this Policy</span>
+                <span class="toc-paging">16</span>
+            </p>
+        </div>
+        <div style="padding-left: 15px;">
+            <p style="padding-top: 10px;">
+                <span class="c40 c10">Financial Responsibility Laws</span>
+                <span class="toc-paging">16</span>
+            </p>
+        </div>
+        <div style="padding-left: 15px;">
+            <p style="padding-top: 10px;">
+                <span class="c40 c10">Action Against the Company</span>
+                <span class="toc-paging">16</span>
+            </p>
+        </div>
+        <div style="padding-left: 15px;">
+            <p style="padding-top: 10px;">
+                <span class="c40 c10">Cross Liability</span>
+                <span class="toc-paging">17</span>
+            </p>
+        </div>
+        <div style="padding-left: 15px;">
+            <p style="padding-top: 10px;">
+                <span class="c40 c10">Entire Agreement</span>
+                <span class="toc-paging">17</span>
+            </p>
+        </div>
+        <div style="padding-left: 15px;">
+            <p style="padding-top: 10px;">
+                <span class="c40 c10">Sanctions Clause</span>
+                <span class="toc-paging">17</span>
+            </p>
+        </div>
     </div>
+    <div style="padding-top: 25px;">
+        <span><b>AGCS-UAS 1200 (09-15)</b></span> <b style="padding-left: 450px;">Page 1 of 17</b>
     </div>
+</div>
 
 
 
@@ -9096,7 +9241,7 @@ The insurance provided by <b>Coverage 4</b> is secondary and <b>Excess Insurance
 </div>
 
 {{#if hasDroneDetails}}
-<div style="padding-bottom: 500px;">
+<div style="min-height: 97%;">
 
     <div style="padding-top: 25px;">
         <img 
@@ -9166,13 +9311,13 @@ The insurance provided by <b>Coverage 4</b> is secondary and <b>Excess Insurance
                 <p class="c46 c48"><span class="c3">$ {{this.drone_value}}</span></p>
             </td>
             <td class="c107" colspan="2" rowspan="1">
-                <p class="c46 c48"><span class="c3">&nbsp; &nbsp; &nbsp;</span></p>
+                <p class="c46 c48"><span class="c3">$ {{this.deductible_value}}</span></p>
             </td>
         </tr>
         {{/each}}
     </table>
 </div>
-<div style="padding-bottom: 20px;">
+<div style="padding-bottom: 20px; margin-top: -25px;">
     <span><b>AGCS-AV 4125 (01-15)</b></span> <b style="padding-left: 450px;">Page 1 of 1</b>
 </div>
 {{/if}}
@@ -9218,20 +9363,20 @@ The insurance provided by <b>Coverage 4</b> is secondary and <b>Excess Insurance
                         <span style="padding-left: 75px;"><u>Limit</u></span>
                     </p>
                     <p style="margin-left: -25px; padding-top: 5px;">
-                        <span>&#9744;&nbsp;&nbsp;</span><a id="id.43ky6rz"></a>
+                        <span><span style="border: solid 0.7px;">X</span>&nbsp;&nbsp;</span>
                         <span>All Aircraft</span>
-                        <span style="padding-left: 60px;">
-                            <span>&#9744;&nbsp;&nbsp;</span><a id="id.43ky6rz"></a>
+                        <span style="padding-left: 60px;">&nbsp;&nbsp;&nbsp;
+                            <span style="border: solid 0.7px;">&nbsp;&nbsp;</span>
                             <br/>
                             <span style="display: flex; max-width: 300px; padding-top: 5px; padding-left: 435px;">
-                                <span>&#9744;&nbsp;&nbsp;</span><a id="id.43ky6rz"></a>
+                                <span><span style="border: solid 0.7px;">X</span>&nbsp;&nbsp;</span>
                                 Same as the Single Limit for Bodily Injury and Property Damage shown for each aircraft, subject to a maximum Limit of Liability of $50,000,000, any one aircraft.
                             </span>
                         </span>
                     </p>
                 </div>
             </li>
-            <div style="padding-bottom: 10px; padding-top: 275px;">
+            <div style="padding-bottom: 10px; padding-top: 300px;">
                 <span><b>AGCS-UAS 4140 (09-16)</b></span> <b style="padding-left: 450px;">Page 1 of 2</b>
             </div>
 
@@ -9323,9 +9468,9 @@ The insurance provided by <b>Coverage 4</b> is secondary and <b>Excess Insurance
 
 
 
-<div style="padding-bottom: 380px;">
+<div style="min-height: 97%;">
 
-    <div>
+    <div style="padding-top: 25px;">
         <img 
             src="https://www.allianz.com/content/dam/onemarketing/system/AZ_Logo_Twitter_438x220px.png"
             style="height: 70px; width: 150px; float: right";
@@ -9333,7 +9478,7 @@ The insurance provided by <b>Coverage 4</b> is secondary and <b>Excess Insurance
     </div>
 
     <div style="padding-top: 75px;">
-        <p><b>Named Insured:&nbsp;&nbsp;{{insured_name}}</b> </p>
+            <p><b>Named Insured:&nbsp;&nbsp;{{insured_name}}</b> </p>
         <p style="padding-bottom: 10px;">
             <b>Policy Number: &nbsp;&nbsp;{{policy_number}}</b> 
             <span style="padding-left: 325px;"><b>Endorsement Number</b></span>
@@ -9344,22 +9489,18 @@ The insurance provided by <b>Coverage 4</b> is secondary and <b>Excess Insurance
         </p>
     </div>
 
-    <div class="part-heading" style="padding-top: 25px;">CANCELLATION CLAUSE AMENDMENT ENDORSEMENT</div>
+    <div class="part-heading">FELLOW EMPLOYEE COVERAGE ENDORSEMENT</div>
 
     <div class="coverage-paragraph">
-        In consideration of  premium of $Included, this endorsement modifies the policy to which it is attached as follows: <br/> <br/> <br/> 
-        <b>Cancellation and Non-Renewal of this Policy</b> is deleted in its entirety and replaced by the following: <br/> <br/>
-        This policy may be canceled by the <b>Named Insured</b> by mailing prior written notice to the Company stating when the cancellation will be effective. This policy may be canceled by the Company by mailing prior written notice to the first <b>Named Insured</b> at the first address shown in <b>Item 2</b>. of the Declarations stating when, not less than thirty (30) days thereafter, the cancellation will be effective. If the cancellation is for non-payment of any premium due, however, only ten (10) days prior written notice will be provided. The effective date and hour of cancellation stated in the notice will become the end of the policy period. <br/> <br/>
-        If the <b>Named Insured</b> cancels the policy, earned premium will be computed in accordance with the customary short rate table and procedure or the amount specified as the Minimum Premium show on the Declarations Page, whichever is greater.  If the Company cancels, earned premium will be computed on a pro-rata basis. Premium adjustment may be made either at the time cancellation is effective or as soon as practicable after cancellation becomes effective, but payment or tender of unearned premium by the Company is not required in order for the cancellation to be effective. <br/> <br/>
-        The Company will mail written notice of non-renewal to the first <b>Named Insured</b> at least sixty (60) days prior to the expiration date of this policy in the event that either decided not to renew this policy. <br/> <br/>
-        The proof of mailing or delivering notice of non-renewal or cancellation to the first <b>Named Insured</b> by the Company will be sufficient proof of notice to all <b>Insureds</b>. <br/> <br/>
-        However, in no event shall the provisions set forth above be less than the statutory requirements. <br/> <br/>
+        In consideration of an additional premium of $Included, this endorsement modifies the policy to which it is attached as follows: <br/> <br/>
+        Regardless of anything to the contrary in Exclusion 1. d) of this policy, Liability Coverages of this policy are extended to apply to <b>bodily injury</b> and <b>property damage</b> liability claims asserted by an employee of the <b>Named Insured</b> against another employee of the same <b>Named Insured</b> arising out of the ownership, maintenance or use of the <b>aircraft</b>. This endorsement does not provide coverage to the <b>Named Insured</b> for any <b>bodily injury</b> and <b>property damage</b> liability claims asserted by employees of the <b>Named Insured</b>, and all other provisions of Exclusion 1. d) remain in full force and effect.
     </div>
 </div>
-<div class="coverage-paragraph">All other provisions of this policy remain the same.</div>
-<div style="padding-bottom: 25px;">
-    <span><b>AGCS-UAS 4640 (02-18)</b></span> <b style="padding-left: 450px;">Page 1 of 1</b>
+<div style="padding-bottom: 20px; margin-top: -50px;">
+    <p class="coverage-paragraph">All other provisions of this policy remain the same.</p>
+    <span><b>AGCS-UAS 4320 (08-10)</b></span> <b style="padding-left: 450px;">Page 1 of 1</b>
 </div>
+
 
 
 <div style="padding-bottom: 330px;">
@@ -9409,6 +9550,373 @@ The insurance provided by <b>Coverage 4</b> is secondary and <b>Excess Insurance
 <div style="padding-bottom: 10px;">
     <span><b>AGCS-UAS 8700 (12-19)</b></span> <b style="padding-left: 450px;">Page 1 of 1</b>
 </div>
+
+
+
+
+<div style="">
+    <div style="padding-top: 25px;">
+        <img 
+            src="https://www.allianz.com/content/dam/onemarketing/system/AZ_Logo_Twitter_438x220px.png"
+            style="height: 70px; width: 150px; float: right";
+        />
+    </div>
+
+    <div style="padding-top: 75px;">
+            <p><b>Named Insured:&nbsp;&nbsp;{{insured_name}}</b> </p>
+        <p style="padding-bottom: 10px;">
+            <b>Policy Number: &nbsp;&nbsp;{{policy_number}}</b> 
+            <span style="padding-left: 325px;"><b>Endorsement Number</b></span>
+        </p>
+        <p>
+            <b>Effective Date: &nbsp;&nbsp;{{policy_start_date}}</b> 
+            <span style="padding-left: 375px;"><b>8</b></span>
+        </p>
+    </div>
+
+    <div class="part-heading">IOWA CANCELLATION - NONRENEWAL ENDORSEMENT</div>
+
+    <div class="coverage-paragraph">
+        This endorsement modifies the policy to which it is attached as follows: <br/> <br/>
+        Wherever used in this endorsement: 1) “we”, “us”, “our”, and “Insurer” mean the insurance company which issued this policy; and 2) “you”, “your”, “Named Insured”, “First Named Insured”, and “Insured” mean the Named Corporation, Named Organization, Named Sponsor, Named Insured, or Insured stated in the Declarations page; and 3) “Other Insured(s)” means all other persons or entities afforded coverage under the policy
+    </div>
+
+    <div class="coverage-subheading"><u>CANCELLATION</u></div>
+
+    <div class="coverage-paragraph">
+        <ol style="padding-left: 25px; padding-top: 10px;" type="A">
+            <li>
+                The cancellation policy condition is replaced by the following:
+                <ol style="padding-left: 25px; padding-top: 10px; padding-bottom: 10px;" >
+                    <li style="padding-bottom: 5px;">The First Named Insured shown in the Declarations may cancel this policy by mailing or delivering to the Insurer advance written notice of cancellation.</li>
+                    <li>
+                        <ol style="padding-left: 25px; padding-top: 10px; padding-bottom: 10px;" type="a">
+                            <li style="padding-bottom: 5px;">
+                                The Insurer may cancel this policy by mailing or delivering to the First Named Insured and any loss payee, written notice of cancellation at least:
+                                <ol style="padding-left: 25px; padding-top: 10px; padding-bottom: 10px;">
+                                    <li style="padding-bottom: 5px;">thirty (30) days before the effective date of cancellation if the Insurer cancels due to loss of reinsurance coverage; or</li>
+                                    <li style="padding-bottom: 5px;">ten (10) days before the effective date of cancellation if the Insurer cancels for any other reason.</li>
+                                </ol>
+                            </li>
+                            <li style="padding-bottom: 5px;">
+                                If this policy is a new policy and has been in effect for less than sixty (60) days, the Insurer may cancel for:
+                                <ol style="padding-left: 25px; padding-top: 10px; padding-bottom: 10px;">
+                                    <li style="padding-bottom: 5px;">loss of reinsurance subject to 2. d) below; or</li>
+                                    <li style="padding-bottom: 5px;">any other reason.</li>
+                                </ol>
+                            </li>
+                            <li style="padding-bottom: 5px;">
+                                If this policy has been in effect for sixty (60) days or more, or is a renewal of a policy the Insurer issued, the Insurer may cancel only for one or more of the following reasons:
+                                <ol style="padding-left: 25px; padding-top: 10px; padding-bottom: 10px;">
+                                    <li style="padding-bottom: 5px;">Nonpayment of premium;</li>
+                                    <li style="padding-bottom: 5px;">Misrepresentation or fraud made by or with the knowledge of the First Named Insured or Other Insured(s) in obtaining the policy, when renewing the policy, or in presenting a claim under the policy;</li>
+                                    <li style="padding-bottom: 5px;">Acts or omissions by the First Named Insured or Other Insured(s) that substantially change or increase the risk insured;</li>
+                                    <li style="padding-bottom: 5px;">Determination by the insurance commissioner that the continuation of the policy would jeopardize the Insurer’s solvency or would place the Insurer in violation of the laws of this or any other state;</li>
+                                    <li style="padding-bottom: 5px;">The First Named Insured or Other Insured(s) has acted in a manner which he or she knew or should have known was in violation or breach of a policy term or condition; or</li>
+                                    <li style="padding-bottom: 5px;">Loss of reinsurance, subject to 2. d) below.</li>
+                                </ol>
+                            </li>
+                            <li style="padding-bottom: 5px;">The Insurer may cancel due to loss of reinsurance which provides coverage to the Insurer for a significant portion of the underlying risk insured, but only if the insurance commissioner determines that such cancellation is justified.</li>
+                        </ol>
+                    </li>
+
+                    <div style="padding-top: 75px; margin-left: -50px;">
+                        <span><b>AGCS-AV IA01 (09-21)</b></span> <b style="padding-left: 450px;">Page 1 of 2</b>
+                        <p style="justify-content:center; text-align: center;">Copyright © 2021 Allianz Global Risks US Insurance Company. All rights reserved.</p>
+                    </div>
+
+                    <div style="padding-top: 25px;">
+                        <img 
+                            src="https://www.allianz.com/content/dam/onemarketing/system/AZ_Logo_Twitter_438x220px.png"
+                            style="height: 70px; width: 150px; float: right";
+                        />
+                    </div>
+
+                    <li style="padding-bottom: 5px; padding-top: 75px;">The Insurer will mail or deliver the notice of cancellation to the First Named Insured’s and any loss payee’s last mailing address known to the Insurer.</li>
+                    <li style="padding-bottom: 5px;">
+                        Notice of cancellation will state:
+                        <ol style="padding-left: 25px; padding-top: 10px; padding-bottom: 10px;">
+                            <li style="padding-bottom: 5px;">The reason for cancellation; and</li>
+                            <li style="padding-bottom: 5px;">The effective date of cancellation. The policy period will end on that date.</li>
+                        </ol>
+                    </li>
+                    <li style="padding-bottom: 5px;">If this policy is cancelled, the Insurer will send the First Named Insured any premium refund due. If the Insurer cancels, the refund will be pro rata. If the First Named Insured cancels, the refund may be less than pro rata. The cancellation will be effective even if the Insurer has not made or offered a refund.</li>
+                    <li style="padding-bottom: 5px;">If notice is mailed, a post office department certificate of mailing is proof of receipt of notice. However, if cancellation is for nonpayment of premium, a certificate of mailing is not required.</li>
+                </ol>
+                
+            </li>
+            <li style="padding-bottom: 5px;">
+                The following is added and supersedes any other provision to the contrary: <br/> <br/>
+                <div class="coverage-subheading"><u>NONRENEWAL</u></div>
+                <ol style="padding-left: 25px; padding-top: 10px; padding-bottom: 10px;">
+                    <li style="padding-bottom: 5px;">
+                        If the Insurer decides not to renew this policy, the Insurer will mail or deliver written notice of nonrenewal to the First Named Insured and any loss payee at least 45 days before the expiration date of this policy, except if:
+                        <ol style="padding-left: 25px; padding-top: 10px; padding-bottom: 10px;" type="a">
+                            <li style="padding-bottom: 5px;">The Insurer has offered to issue a renewal policy; or</li>
+                            <li style="padding-bottom: 5px;">The First Named Insured has failed to pay a premium due to any advance premium required for renewal.</li>
+                        </ol>
+                    </li>
+                    <li style="padding-bottom: 5px;">If notice is mailed, a post office department certificate of mailing is proof of receipt of notice.</li>
+                </ol>
+            </li>
+        </ol>
+    </div>
+
+</div>
+<div style="padding-bottom: 10px; padding-top: 450px;">
+    <p class="coverage-paragraph">All other provisions of this policy remain the same.</p>
+    <span><b>AGCS-AV IA01 (09-21)</b></span> <b style="padding-left: 450px;">Page 2 of 2</b>
+    <p style="justify-content:center; text-align: center;">Copyright © 2021 Allianz Global Risks US Insurance Company. All rights reserved.</p>
+</div>
+
+
+
+
+
+
+
+
+
+<div style="min-height: 99%;">
+
+    <div style="padding-top: 25px;">
+        <img 
+            src="https://www.allianz.com/content/dam/onemarketing/system/AZ_Logo_Twitter_438x220px.png"
+            style="height: 70px; width: 150px; float: right";
+        />
+    </div>
+
+    <div style="padding-top: 75px;" class="coverage-subheading">Allianz Global Risks US Insurance Company Privacy and Security Statement</div>
+
+    <div class="coverage-paragraph">
+        Protecting you and your family from loss is important to Allianz Global Risks US. Just as important to us is protecting your privacy and the personal information we use to provide you with superior products and service. <br/> <br/>
+        At Allianz Global Risks US, and its subsidiaries, our policy is to maintain appropriate confidentiality with regard to all personal information obtained in the course of doing business with you. Our pledge to protect your privacy is reflected in this Privacy Statement which outlines our principles in collecting, using and safeguarding your personal information and information about your relationship with us. <br/> <br/>
+    </div>
+
+    <div class="coverage-heading">
+        Personal Information Allianz Global Risks US Collects
+    </div>
+
+    <div class="coverage-paragraph" style="padding-left: 10px;">
+        Allianz Global Risks US only collects personal information about you when it is necessary to conduct the business of insurance. We limit the collection of personal information to what we reasonably believe is needed to administer your account. As a result, we collect personal information from the following sources: <br/>
+        <ul style="padding-top: 10px; padding-left: 50px;">
+            <li>Personal information you share with us either directly or through your agent, such as the information on your insurance application, requested policy change information or other forms you may complete.</li>
+            <li>Personal information you provide or which is obtained through the process of handling a claim, including medical information, such as from an accident report.</li>
+            <li>Personal information about you from your transactions with us, our affiliates or others such as the number of years you have been a policyholder with Allianz Global Risks US or the types of coverage you purchase.</li>
+            <li>Personal information about you from a consumer reporting agency, such as a credit report or a Motor Vehicle Report.</li>
+        </ul>
+        <br/> <br/>
+        If you visit or use the Allianz Global Risks US website, or one of our subsidiaries, we may use “cookies” (small text files transferred from our website to your hard drive) to recognize repeat users, track usage and facilitate your access to and use of the site. We do not use cookies to gather personal information, and we do not link cookies to identifiable information, such as your policy number. The cookies only enable you to use our website more easily.
+    </div>
+
+    <div class="coverage-heading">
+        Personal Information Allianz Global Risks US Discloses
+    </div>
+
+    <div class="coverage-paragraph" style="padding-left: 10px;">
+        Allianz Global Risks US does not disclose any personal information about current or former customers to anyone, except as permitted by law. <br/> <br/> <br/>
+        When possible, we advise our vendors and other nonaffiliated third parties, to whom we legally provide your personal information in the course of conducting our insurance business, of our privacy policy. We make every effort to use vendors whose approach to customer privacy reflects our own.
+    </div>
+
+    <div class="coverage-heading">
+        Allianz Global Risks US’s Policies and Practices with Respect to Security of Personal Information
+    </div>
+
+    <div class="coverage-paragraph" style="padding-left: 10px;">
+        Allianz Global Risks US uses a variety of computer hardware and software tools to maintain physical, electronic and procedural safeguards that comply with applicable federal and state regulations to guard your personal information. We restrict access to personal information about you to only those employees who need that information to provide products or services to you. <br/> <br/>
+        Allianz Global Risks US, and its subsidiaries, also works hard to ensure that our websites are secure. We employ firewalls, encryption technology, user authentication systems and access control mechanisms to control access to the personal information that may be shared over these sites.
+    </div>
+
+</div>
+<div style="padding-left: 25px;">
+    GLB Privacy 03-21
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<div style="min-height: 99%;">
+
+    <div style="padding-top: 25px;">
+        <img 
+            src="https://www.allianz.com/content/dam/onemarketing/system/AZ_Logo_Twitter_438x220px.png"
+            style="height: 70px; width: 150px; float: right";
+        />
+    </div>
+
+    <div style="padding-top: 75px;" class="coverage-subheading">Notification of Change</div>
+
+    <div class="coverage-paragraph">
+        At Allianz Global Risks US, your trust is one of our most important assets. We will continually work to protect the privacy of our individual customers and will continually review our privacy policy. If at some point in the future we revise our privacy practices that affect your personal information, we will notify you prior to introducing any changes. This Privacy Statement is also displayed on our website. (<a href="https://www.agcs.allianz.com/global-offices/united-states/" style="color: blue;">https://www.agcs.allianz.com/global-offices/united-states/</a>)
+    </div>
+
+    <div class="coverage-subheading">
+        For More Information or if You have Questions
+    </div>
+
+    <div class="coverage-paragraph">
+        Should you have further questions regarding our privacy policy, you can contact us in a number of ways. You may email us at <span style="color: blue;">nacorpcompliance@agcs.allianz.com</span> or you can write to us at: <br/> <br/>
+    </div>
+
+    <div class="coverage-paragraph" style="padding-left: 20px;">
+        Allianz Global Risks US <br/> 
+        Corporate Compliance Department <br/> 
+        225 W. Washington Street, Suite 1800 <br/> 
+        Chicago, IL 60606 <br/> 
+    </div>
+
+    <div class="coverage-subheading">Allianz Global Risks US’s Family of Companies</div>
+    <div class="coverage-paragraph">
+        The following lists the issuing companies Allianz Global Risks US uses to issue insurance policies nationwide: <br/> <br/> <br/>
+
+
+        <table style="font-size: 14px;">
+            <tr>
+                <td>AGCS Marine Insurance Company</td>
+                <td style="padding-left: 50px;">Fireman’s Fund Insurance Company</td>
+            </tr>
+            <tr>
+                <td>Allianz Global Risks US Insurance Company</td>
+                <td style="padding-left: 50px;">Fireman’s Fund Indemnity Corporation</td>
+            </tr>
+            <tr>
+                <td>Allianz Underwriters Insurance Company</td>
+                <td style="padding-left: 50px;">Interstate Fire & Casualty Company</td>
+            </tr>
+            <tr>
+                <td>American Automobile Insurance Company</td>
+                <td style="padding-left: 50px;">National Surety Corporation</td>
+            </tr>
+            <tr>
+                <td>Associated Indemnity Corporation</td>
+                <td style="padding-left: 50px;">The American Insurance Company</td>
+            </tr>
+            <tr>
+                <td>Chicago Insurance Company</td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+
+</div>
+<div style="padding-left: 25px;">
+    GLB Privacy 03-21
+</div>
+
+
+
+
+
+
+
+
+
+
+<div style="min-height: 98%;">
+
+    <div style="padding-top: 25px;">
+        <img 
+            src="https://www.allianz.com/content/dam/onemarketing/system/AZ_Logo_Twitter_438x220px.png"
+            style="height: 70px; width: 150px; float: right";
+        />
+    </div>
+
+    <div style="padding-top: 75px;" class="part-heading">
+        POLICYHOLDER DISCLOSURE <br/>
+        NOTICE OF TERRORISM INSURANCE COVERAGE
+    </div>
+
+    <div class="coverage-paragraph">
+        <table style="width: 95%; border: solid 1px;">
+            <tr>
+                <td style="padding-left: 10px;">
+                    <p style="border-right: 1px solid black;"><b>Named Insured</b></p>
+                    <p style="border-right: 1px solid black;">{{insured_name}}</p>
+                    <p style="border-right: 1px solid black;">{{applicant_street}} {{applicant_city}}</p>
+                    <p style="border-right: 1px solid black;">{{applicant_state}} {{applicant_zip_code}}</p>
+                </td>
+                <td style="padding-left: 10px;">
+                    <p><b>Producer</b></p>
+                    <p style="max-width: 150px;">{{producer_broker}}</p>
+                </td>
+            </tr>
+        </table>
+
+        <p style="padding-top: 15px;">
+            <span> <b>Policy Term: </b> {{policy_start_date}} to {{policy_end_date}}</span>
+        </p>
+        <p><b>Date: {{current_date}}</b></p> <br/>
+
+        Coverage for acts of terrorism is included in your policy. You are hereby notified that the Terrorism Risk Insurance Act, as amended in 2019, defines an act of terrorism in Section 102(1) of the Act: The term “act of terrorism” means any act or acts that are certified by the Secretary of the Treasury—in consultation with the Secretary of Homeland Security, and the Attorney General of the United States—to be an act of terrorism; to be a violent act or an act that is dangerous to human life, property, or infrastructure; to have resulted in damage within the United States, or outside the United States in the case of certain air carriers or vessels or the premises of a United States mission; and to have been committed by an individual or individuals as part of an effort to coerce the civilian population of the United States or to influence the policy or affect the conduct of the United States Government by coercion. Under your coverage, any losses resulting from certified acts of terrorism may be partially reimbursed by the United States Government under a formula established by the Terrorism Risk Insurance Act, as amended. However, your policy may contain other exclusions which might affect your coverage, such as an exclusion for nuclear events. Under the formula, the United States Government generally reimburses 80% beginning on January 1, 2020, of covered terrorism losses exceeding the statutorily established deductible paid by the insurance company providing the coverage. The Terrorism Risk Insurance Act, as amended, contains a $100 billion cap that limits U.S. Government reimbursement as well as insurers’ liability for losses resulting from certified acts of terrorism when the amount of such losses exceeds $100 billion in any one calendar year. If the aggregate insured losses for all insurers exceed $100 billion, your coverage may be reduced. <br/> <br/>
+        The portion of your annual premium that is attributable to coverage for acts of terrorism is, and does not include any charges for the portion of losses covered by the United States government under the Act. <br/> <br/>
+        I ACKNOWLEDGE THAT I HAVE BEEN NOTIFIED THAT UNDER THE TERRORISM RISK INSURANCE ACT, AS AMENDED, ANY LOSSES RESULTING FROM CERTIFIED ACTS OF TERRORISM UNDER MY POLICY COVERAGE MAY BE PARTIALLY REIMBURSED BY THE UNITED STATES GOVERNMENT AND MAY BE SUBJECT TO A $100 BILLION CAP THAT MAY REDUCE MY COVERAGE, AND I HAVE BEEN NOTIFIED OF THE PORTION OF MY PREMIUM ATTRIBUTABLE TO SUCH COVERAGE. <br/> <br/>
+        This Notice does not form a part of your insurance contract. The Notice is designed to alert you to coverage restrictions and to other provisions in certain terrorism endorsement(s) in this policy. If there is any conflict between this notice and the policy (including its endorsements) the provisions of the policy (including its endorsements) apply. <br/> <br/>
+        Note: In the states of Arizona, California, Connecticut, Georgia, Hawaii, Idaho, Illinois, Iowa, Louisiana, Maine, Massachusetts, Michigan, Minnesota, Missouri, Nebraska, New Hampshire, New York, North Carolina, North Dakota, Oklahoma, Oregon, Pennsylvania, Rhode Island, Virginia, Washington, West Virginia and Wisconsin, our terrorism exclusion makes an exception for fire losses resulting from an Act of Terrorism. <br/> <br/>
+    </div>
+
+</div>
+<div style="margin-top: -25px;">
+    <span><b>AGR-TRIA DN2 (12-20)</b></span> <b style="padding-left: 450px;">Page 1 of 2</b>
+    <p style="justify-content:center; text-align: center;">Copyright © 2021 Allianz Global Risks US Insurance Company. All rights reserved.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+<div style="min-height: 98%;">
+
+    <div style="padding-top: 25px;">
+        <img 
+            src="https://www.allianz.com/content/dam/onemarketing/system/AZ_Logo_Twitter_438x220px.png"
+            style="height: 70px; width: 150px; float: right";
+        />
+    </div>
+
+    <div style="padding-top: 75px;" class="coverage-paragraph">
+        In these states, if you decline to purchase terrorism Coverage, you still have coverage for fire losses resulting from an Act of Terrorism. <br/>
+
+        <table style="font-size: 14px; border-spacing: 0 8px;">
+            <tr>
+                <td style="justify-content: right; text-align: right;">Signature of Policyholder/Applicant</td>
+                <td>_________________________________________________</td>
+            </tr>
+            <tr>
+                <td style="justify-content: right; text-align: right;">Print Name and Title</td>
+                <td>_________________________________________________</td>
+            </tr>
+            <tr>
+                <td style="justify-content: right; text-align: right;">Date</td>
+                <td>_________________________________________________</td>
+            </tr>
+        </table>
+    </div>
+
+    
+
+</div>
+<div style="margin-top: -25px;">
+    <span><b>AGR-TRIA DN2 (12-20)</b></span> <b style="padding-left: 450px;">Page 2 of 2</b>
+    <p style="justify-content:center; text-align: center;">Copyright © 2021 Allianz Global Risks US Insurance Company. All rights reserved.</p>
+</div>
+
+
+
+
+
+
 
 </body>
 

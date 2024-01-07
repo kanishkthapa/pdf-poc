@@ -71,31 +71,50 @@ app.get("/document", async (req, res) => {
   );
 
   const liability_limit = 5000000;
-  // const drone_details = [
-  //   {
-  //     drone_make: "Sony",
-  //     drone_model: "Sony Ombitrix",
-  //     drone_build_year: 2015,
-  //     drone_serial_number: "BEN!0",
-  //     drone_value: 1000,
-  //   },
-  //   {
-  //     drone_make: "CANON",
-  //     drone_model: "GWEN",
-  //     drone_build_year: 2018,
-  //     drone_serial_number: "GW3N",
-  //     drone_value: 2000,
-  //   },
-  // ];
+  const drone_details = [
+    {
+      drone_make: "Sony",
+      drone_model: "Sony Ombitrix",
+      drone_build_year: 2015,
+      drone_serial_number: "BEN!0",
+      drone_value: 1000,
+    },
+    {
+      drone_make: "CANON",
+      drone_model: "GWEN",
+      drone_build_year: 2018,
+      drone_serial_number: "GW3N",
+      drone_value: 2000,
+    },
+  ];
 
-  let drone_details;
   let hasDroneDetails = false;
 
   if (drone_details && drone_details.length > 0) {
     hasDroneDetails = true;
   }
 
-  const applData = {};
+  let applData = {};
+
+  applData = { ...applData, drone_details };
+
+  console.log("application data before", applData);
+
+  if (hasDroneDetails) {
+    applData.drone_details.forEach((item) => {
+      let deductibleValue = item.drone_value * 0.1;
+
+      if (deductibleValue < 250) {
+        deductibleValue = 250;
+      }
+
+      item = { ...item, deductible_value: deductibleValue };
+
+      console.log("item here", item);
+    });
+  }
+
+  console.log("applicaton data after", applData);
 
   // console.log(drone_details);
 
@@ -131,6 +150,7 @@ app.get("/document", async (req, res) => {
     applicant_state: "NY",
     applicant_zip: "10100",
     policy_start_date: "25 November, 2023",
+    policy_end_date: "25 November, 2024",
     premium_amount: 200,
     tax: 10,
     total: 210,
