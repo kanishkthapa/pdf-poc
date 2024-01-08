@@ -8,6 +8,7 @@ const testTemplateSource = fs.readFileSync("testTemp.hbs", "utf-8");
 const allianzTemplate = fs.readFileSync("allianz.hbs", "utf-8");
 const policyHolderMessage = fs.readFileSync("policyholderMessage.hbs", "utf-8");
 const privacyStatementforAK = fs.readFileSync("privacyMessageAK.hbs", "utf-8");
+const privacyStatementforCA = fs.readFileSync("privacyMessageCA.hbs", "utf-8");
 
 const app = express();
 
@@ -46,7 +47,7 @@ app.listen(8080, (req, res) => {
 });
 
 app.get("/document", async (req, res) => {
-  const template = handlebars.compile(privacyStatementforAK);
+  const template = handlebars.compile(privacyStatementforCA);
 
   const dateArray = [
     new Date("2023-10-01"),
