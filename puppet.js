@@ -9,6 +9,12 @@ const allianzTemplate = fs.readFileSync("allianz.hbs", "utf-8");
 const policyHolderMessage = fs.readFileSync("policyholderMessage.hbs", "utf-8");
 const privacyStatementforAK = fs.readFileSync("privacyMessageAK.hbs", "utf-8");
 const privacyStatementforCA = fs.readFileSync("privacyMessageCA.hbs", "utf-8");
+const privacyStatementforMT = fs.readFileSync("privacyMessageMT.hbs", "utf-8");
+const privacyStatementforAZ = fs.readFileSync("privacyMessageAZ.hbs", "utf-8");
+const privacyStatementforRest = fs.readFileSync(
+  "privacyMessageOthers.hbs",
+  "utf-8"
+);
 
 const app = express();
 
@@ -47,7 +53,7 @@ app.listen(8080, (req, res) => {
 });
 
 app.get("/document", async (req, res) => {
-  const template = handlebars.compile(privacyStatementforCA);
+  const template = handlebars.compile(allianzTemplate);
 
   const dateArray = [
     new Date("2023-10-01"),
@@ -146,6 +152,10 @@ app.get("/document", async (req, res) => {
     */
 
     producer_broker: "Brokery, LLC8 The Green, Ste B Dover, DE 01990",
+    producer_name: "Brokery",
+    producer_street: "201 Street",
+    producer_apt: "Suite 700",
+    producer_city: "New York, NY 10005",
     policy_number: "BEN10ALNZ",
     insured_name: "Ben Tennyson",
     applicant_street: "10 Road",

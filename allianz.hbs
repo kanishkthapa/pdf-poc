@@ -4,7 +4,10 @@
 <head>
     <meta content="text/html; charset=UTF-8" http-equiv="content-type">
     <style type="text/css">
-        @import url(https://themes.googleusercontent.com/fonts/css?kit=Lx1xfUTR4qFjwg0Z_pb901bqibjAC9TcrSzAoXtxa2E);
+        body {
+            font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+            font-weight: 400;
+        }
 
         .lst-kix_list_33-5>li {
             counter-increment: lst-ctn-kix_list_33-5
@@ -7594,6 +7597,7 @@
 
         .page {
             min-height: 99%;
+            max-height: 99%;
         }
 
         .subtitle {
@@ -7725,7 +7729,7 @@
             />
         </div>
 
-        <div style="padding-top: 115px;">
+    <div style="padding-top: 115px;">
         <span class="c72" style="font-size: 27px; padding-bottom: 15px; margin-top:100px; position: flex;">Allianz Global Corporate &amp; Specialty</span></p>
         <p class="c46 c16"style="padding-bottom: 20px;"><span class="c110 c159"></span></p>
         <p class="c6 c18 c67"><span class="c37 c69">The following are your options for reporting a claim to Allianz Global
@@ -7788,8 +7792,11 @@
             <p class="c6 c48 c132" style="padding-left: 120px;"><span class="c3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Chicago, IL
                     &nbsp;60606-3484</span></p>
 
-            <span style="display: inline; max-height: 30px; max-width: 100px; padding-left: 75px;" class="coverage-paragraph">Producer:
-                &nbsp;&nbsp;{{producer_broker}}
+            <span style="display: inline; max-height: 30px; max-width: 100px; padding-left: 75px; padding-top: 5px;" class="coverage-paragraph">Producer:
+                &nbsp;&nbsp;{{producer_name}}
+                <p style="padding-left: 143px;">{{producer_street}}</p>
+                <p style="padding-left: 143px;">{{producer_apt}}</p>
+                <p style="padding-left: 143px;">{{producer_city}}</p>
             </span>
 
             <p class="c29 c48" id="h.gjdgxs"><span class="c37 c13 c101">UNMANNED AIRCRAFT SYSTEMS INSURANCE POLICY</span></p>
@@ -7813,10 +7820,8 @@
             <div class="coverage-paragraph">
             <p class="c6 c48"><span>Mailing </span><span
                 class="c3">Address:</span>
-                <span style="padding-left: 58px">{{applicant_street}} <br/> </span>
-                <span style="padding-left: 160px; padding-top:12px;">{{applicant_city}} <br/> </span>
-                <span style="padding-left: 160px; padding-top:12px;">{{applicant_state}} <br/> </span>
-                <span style="padding-left: 160px; padding-top:12px;">{{applicant_zip}} </span>
+                <span style="padding-left: 58px">{{applicant_street}}  {{applicant_city}}<br/> </span>
+                <span style="padding-left: 162px; padding-top:12px;">{{applicant_state}} {{applicant_zip}}<br/> </span>
             </p>
             </div>
 
@@ -7840,13 +7845,7 @@
                     Premium:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$</span>
                         <span style="padding-left: 25px;"><b>{{ premium_amount }}</b></span>
                     </p>
-            <p class="c6"><span class="c3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    &nbsp; &nbsp; </span></p>
-            <p class="c6" style="padding-left: 30px;"><span
-                    class="c10">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Taxes/Surcharges:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$</span>
-                    <span style="padding-left: 25px;"><b>{{ tax }} </b></span>
-                    </p>
+            
             <p class="c6"><span class="c3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     &nbsp; &nbsp; </span></p>
@@ -8027,7 +8026,7 @@
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Each Person
             in any one accident and subject to a total of</span></p>
     <p class="c22 c146"><span class="c10">$</span><span>&nbsp;{{additional_med_expense}}
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span
             class="c3">for all Medical Payments in any one accident.</span></p>
     <p class="c22 c16 c43"><span class="c3"></span></p>
     <p class="c22 c16 c43"><span class="c3"></span></p>
@@ -8089,7 +8088,7 @@
     <p class="c46"><span class="c3">If required by law, this policy is countersigned by:</span></p>
         </div>
         </div>
-        <div>
+        <div style="margin-top: -25px;">
         <span><b>AGCS-UAS 1200 (09-15)</b></span> <b style="padding-left: 125px;">Page 4 of 4</b>
         </div>
 
@@ -9231,7 +9230,7 @@ The insurance provided by <b>Coverage 4</b> is secondary and <b>Excess Insurance
         </div>
     </div>
 
-    <div class="coverage-paragraph" style="padding-top: 20px;">
+    <div class="coverage-paragraph" style="padding-top: 0px;">
         All other provisions of this policy remain the same.
     </div>
     <div style="padding-bottom: 10px;">
@@ -9496,7 +9495,7 @@ The insurance provided by <b>Coverage 4</b> is secondary and <b>Excess Insurance
         Regardless of anything to the contrary in Exclusion 1. d) of this policy, Liability Coverages of this policy are extended to apply to <b>bodily injury</b> and <b>property damage</b> liability claims asserted by an employee of the <b>Named Insured</b> against another employee of the same <b>Named Insured</b> arising out of the ownership, maintenance or use of the <b>aircraft</b>. This endorsement does not provide coverage to the <b>Named Insured</b> for any <b>bodily injury</b> and <b>property damage</b> liability claims asserted by employees of the <b>Named Insured</b>, and all other provisions of Exclusion 1. d) remain in full force and effect.
     </div>
 </div>
-<div style="padding-bottom: 20px; margin-top: -50px;">
+<div style="padding-bottom: 20px; margin-top: -75px;">
     <p class="coverage-paragraph">All other provisions of this policy remain the same.</p>
     <span><b>AGCS-UAS 4320 (08-10)</b></span> <b style="padding-left: 450px;">Page 1 of 1</b>
 </div>
