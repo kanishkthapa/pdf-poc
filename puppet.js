@@ -2,19 +2,16 @@ const express = require("express");
 const fs = require("fs");
 const puppeteer = require("puppeteer");
 const handlebars = require("handlebars");
+const path = require("path");
+// const mime = require("mime");
 
 const templateSource = fs.readFileSync("template.hbs", "utf8");
 const testTemplateSource = fs.readFileSync("testTemp.hbs", "utf-8");
-const allianzTemplate = fs.readFileSync("allianz.hbs", "utf-8");
-const policyHolderMessage = fs.readFileSync("policyholderMessage.hbs", "utf-8");
-const privacyStatementforAK = fs.readFileSync("privacyMessageAK.hbs", "utf-8");
-const privacyStatementforCA = fs.readFileSync("privacyMessageCA.hbs", "utf-8");
-const privacyStatementforMT = fs.readFileSync("privacyMessageMT.hbs", "utf-8");
-const privacyStatementforAZ = fs.readFileSync("privacyMessageAZ.hbs", "utf-8");
-const privacyStatementforRest = fs.readFileSync(
-  "privacyMessageOthers.hbs",
-  "utf-8"
-);
+// const allianzTemplate = fs.readFileSync("allianz.hbs", "utf-8");
+// const privacyStatementforCA = fs.readFileSync(
+//   "privacyStatementforCA.hbs",
+//   "utf-8"
+// );
 
 const app = express();
 
@@ -53,7 +50,7 @@ app.listen(8080, (req, res) => {
 });
 
 app.get("/document", async (req, res) => {
-  const template = handlebars.compile(allianzTemplate);
+  const template = handlebars.compile(templateSource);
 
   const dateArray = [
     new Date("2023-10-01"),
@@ -107,8 +104,6 @@ app.get("/document", async (req, res) => {
 
   applData = { ...applData, drone_details };
 
-  console.log("application data before", applData);
-
   if (hasDroneDetails) {
     applData.drone_details.forEach((item) => {
       let deductibleValue = item.drone_value * 0.1;
@@ -118,12 +113,8 @@ app.get("/document", async (req, res) => {
       }
 
       item = { ...item, deductible_value: deductibleValue };
-
-      console.log("item here", item);
     });
   }
-
-  console.log("applicaton data after", applData);
 
   // console.log(drone_details);
 
@@ -150,7 +141,7 @@ app.get("/document", async (req, res) => {
         "drone_value": 1000
     },
     */
-
+    // img_src: base64Sync("./abcd.png"),
     producer_broker: "Brokery, LLC8 The Green, Ste B Dover, DE 01990",
     producer_name: "Brokery",
     producer_street: "201 Street",
@@ -162,6 +153,11 @@ app.get("/document", async (req, res) => {
     applicant_city: "Tellwood",
     applicant_state: "NY",
     applicant_zip: "10100",
+    name_business_addl_insured: "Steve Rogers",
+    addl_insured_street: "Capn. Street",
+    addl_insured_city: "Brooklyn",
+    addl_insured_state: "New York",
+    addl_insured_zip_code: "12323",
     policy_start_date: "25 November, 2023",
     policy_end_date: "25 November, 2024",
     premium_amount: 200,
@@ -169,14 +165,41 @@ app.get("/document", async (req, res) => {
     total: 210,
     liability_limit: liability_limit,
     hasDroneDetails: hasDroneDetails,
+    hasEquipmentDetails: false,
     drone_details: applData.drone_details ? applData.drone_details : null,
   };
 
+  // Convert PNG image to data URL
+  // const imagePath = "./abcd.png";
+  // const imageData = fs.readFileSync(imagePath, "base64");
+  // const imageMimeType = `image/${path.extname(imagePath).slice(1)}`;
+  // const dataUrl = `data:${imageMimeType};base64,${imageData}`;
+
+  // Add image data URL to the template data
+  // data.image_src = dataUrl;
+
   const html = template(data);
 
-  const browser = await puppeteer.launch({ headless: "new" });
+  let puppeteerConfig = {
+    headless: "new",
+    args: [
+      "--single-process",
+      "--no-zygote",
+      "--no-sandbox",
+      "--disable-setuid-sandbox",
+      "--disable-dev-shm-usage",
+    ],
+    devtools: false,
+  };
+
+  const browser = await puppeteer.launch(puppeteerConfig);
   const page = await browser.newPage();
-  await page.setContent(html, { waitUntil: "networkidle0" });
+  await page.setContent(html);
+  // await page.waitForSelector("img");
+  // await page.screenshot({ path: "screenshot.png" });
+  await page.addStyleTag({
+    content: "img { visibility: visible !important; }",
+  });
 
   const pdf = await page.pdf({
     format: "A4",
