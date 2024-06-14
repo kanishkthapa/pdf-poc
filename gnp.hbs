@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://themes.googleusercontent.com/fonts/css?kit=Lx1xfUTR4qFjwg0Z_pb901bqibjAC9TcrSzAoXtxa2E"
+        rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+            margin: 0;
+            padding: 0;
+            height: 98%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .page {
+            max-height: 100%;
+            min-height: 100%;
+            font-size: 11px;
+        }
+
+        .container {
+            width: 98%;
+            max-width: 1654px;
+            padding: 5px;
+            box-sizing: border-box;
+        }
+
+        .header,
+        .content,
+        .footer {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .header div,
+        .content div,
+        .footer div {
+            padding: 2px;
+        }
+
+        .title {
+            color: rgb(237, 116, 10);
+            font-weight: bold;
+            font-size: medium;
+            padding: 5px;
+            text-align: left;
+        }
+
+        .section {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+
+        .section .left,
+        .section .right {
+            width: 48%;
+        }
+
+        .bank-reference {
+            font-weight: bold;
+            padding: 5px;
+            height: 60px;
+            margin-top: 10px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 5px;
+            border-left: 4px solid #F79237;
+        }
+
+        .header-row {
+            background-color: #cccccc;
+        }
+
+        th,
+        td {
+            border: 1px solid #ccc;
+            padding: 2px;
+            text-align: left;
+        }
+
+        .custom-border {
+            border-collapse: collapse;
+            width: 100%;
+            border: 1px solid rgba(0, 0, 0, 0.275);
+            border-left: 4px solid #F79237;
+        }
+
+        .custom-border th,
+        .custom-border td {
+            border: 1px solid rgba(0, 0, 0, 0.143);
+            border-left: none;
+            border-right: none;
+            padding: 2px;
+            text-align: left;
+        }
+
+        .custom-border th:first-child,
+        .custom-border td:first-child {
+            border-left: 1px solid rgba(0, 0, 0, 0.275);
+        }
+
+        .custom-border th:last-child,
+        .custom-border td:last-child {
+            border-right: 1px solid rgba(0, 0, 0, 0.275);
+        }
+
+        .total-amount {
+            text-align: right;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="page" style="padding-bottom: 15px;">
+            <div style="border-bottom: 1px dotted #000;">
+                <div class="header">
+                    <img src="https://logowik.com/content/uploads/images/gnp-seguros7977.logowik.com.webp"
+                        alt="GNP Logo" height="80px" style="padding:0; margin:0; margin-left: -10px;" />
+                </div>
+                <div class="title" style="padding-left: 20px;">CONTRATANTE</div>
+                <div class="content" style="margin-top:-20px;">
+                    <div class="section">
+                        <div class="left" style="width: 70%; min-width: 70%; max-width: 70%">
+                            <table style="width: 100%;">
+                                <tr class="header-row">
+                                    <td colspan="2">Nombre</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">{{name}}</td>
+                                </tr>
+                                <tr class="header-row">
+                                    <td colspan="2">Dirección</td>
+                                <tr>
+                                    <td colspan="2">{{address}}</td>
+                                </tr>
+                                </tr>
+                                <tr class="header-row">
+                                    <td style="width: 60%;">RFC</td>
+                                    <td>{{rcf}}</td>
+                                </tr>
+                                <tr>
+                                    <td>GARR980106MA0</td>
+                                    <td>0127011538</td>
+                                </tr>
+                                <tr class="header-row">
+                                    <td>Forma de Pago</td>
+                                    <td>Conducto de Pago</td>
+                                </tr>
+                                <tr>
+                                    <td>Mensual</td>
+                                    <td>Intermediario</td>
+                                </tr>
+                                <tr class="header-row">
+                                    <td>Expedición
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        Día
+                                        &nbsp;&nbsp; Mes &nbsp;&nbsp;
+                                        Año
+                                    </td>
+                                    <td>Moneda</td>
+                                </tr>
+                                <tr>
+                                    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        10 &nbsp;&nbsp;&nbsp; 03 &nbsp;&nbsp;&nbsp;&nbsp; 2023</td>
+                                    <td>Nacional</td>
+                                </tr>
+                                <tr class="header-row">
+                                    <td colspan="2">Importe con Letra</td>
+                                <tr>
+                                    <td colspan="2">TRESCIENTOS SETENTA Y DOS PESOS 32/100</td>
+                                </tr>
+                                </tr>
+                                <tr class="header-row">
+                                    <td colspan="2">Concepto DAÑOS / MI MASCOTA GNP</td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <div class="right" style="padding-left:25px; width: 60%; min-width: 60%; max-width: 60%">
+                            <table>
+                                <tr class=" header-row">
+                                    <td style="max-width: 50%;">Parcialidad</td>
+                                    <td>Versión</td>
+                                </tr>
+                                <tr>
+                                    <td>12</td>
+                                    <td>0</td>
+                                </tr>
+                                <tr class="header-row">
+                                    <td>No. de Póliza</td>
+                                    <td>Referencia</td>
+                                </tr>
+                                <tr>
+                                    <td>547718759</td>
+                                    <td>Sin Referencia</td>
+                                </tr>
+                                <tr class="header-row">
+                                    <td colspan="2">Periodo que cubre
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        Día &nbsp;&nbsp; Mes &nbsp;&nbsp;
+                                        Año</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">Desde
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        &nbsp;&nbsp;&nbsp;{{fromDate}} &nbsp;&nbsp;&nbsp;&nbsp;{{fromMonth}}
+                                        &nbsp;&nbsp;&nbsp;&nbsp; {{fromYear}}
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">Hasta
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        &nbsp;&nbsp;&nbsp; {{tillDate}} &nbsp;&nbsp;&nbsp;&nbsp; {{tillMonth}}
+                                        &nbsp;&nbsp;&nbsp;&nbsp; {{tillYear}}
+                                    </td>
+                                </tr>
+                                <tr class="header-row">
+                                    <td colspan="2" class="title" style="padding-left: 20px;">Importe a Pagar</td>
+                                </tr>
+                                <tr>
+                                    <td style="border-right: none;">Prima Neta</td>
+                                    <td style="border-left: none;" class="total-amount">${{premiumTotal}}</td>
+                                </tr>
+                                <tr>
+                                    <td style="border-right: none;">Recargo Pago Fraccionado</td>
+                                    <td style="border-left: none;" class="total-amount">${{paymentSurcharge}}</td>
+                                </tr>
+                                <tr>
+                                    <td style="border-right: none;">Derecho de Póliza</td>
+                                    <td style="border-left: none;" class="total-amount">${{policyPayment}}</td>
+                                </tr>
+                                <tr>
+                                    <td style="border-right: none;">I.V.A.</td>
+                                    <td style="border-left: none;" class="total-amount">${{tax}}</td>
+                                </tr>
+                                <tr style="border-left: none;" class="header-row">
+                                    <td style="border-right: none; font-weight: bold;">Importe por Pagar</td>
+                                    <td style="border-left: none; font-weight: bold;" class="total-amount">
+                                        ${{totalAmountToPay}}</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div style="width: 65%; padding-left:17px;">
+                    <div class="title" style="padding-left: 20px; padding-top: 10px;">Referencia Bancaria</div>
+                    <table class="custom-border" style="font-size: 10px;">
+                        <tr class="header-row">
+                            <th>Banamex</th>
+                            <th>B</th>
+                            <th></th>
+                            <th></th>
+                            <th>8167 0182 3119 2831 1041 6432 02</th>
+                        </tr>
+                        <tr class="header-row">
+                            <th>HSBC</th>
+                            <th>RAP</th>
+                            <th>000825</th>
+                            <th>REF</th>
+                            <th>8231 1928 3110 4164 3247</th>
+                        </tr>
+                        <tr class="header-row">
+                            <th>Scotiabank</th>
+                            <th>CTE</th>
+                            <th>003932</th>
+                            <th>REF</th>
+                            <th>8231 1928 3110 9000 3291</th>
+                        </tr>
+                        <tr class="header-row">
+                            <th>BBVA Bancomer</th>
+                            <th>CIE</th>
+                            <th>1251929</th>
+                            <th>REF</th>
+                            <th>8231 1928 3110 3792 3203</th>
+                        </tr>
+                        <tr class="header-row">
+                            <th>Banorte</th>
+                            <th>EMP</th>
+                            <th>002581</th>
+                            <th>REF</th>
+                            <th>8231 1928 3110 4164 3247</th>
+                        </tr>
+                    </table>
+                </div>
+                <div style="padding-top: 5px; padding-left: 30px; opacity: 70%; margin-top: -3px;">Cuenta Única de
+                    Cobranza
+                </div>
+
+                <div style="padding-top: 50px; font-size: smaller; color:gray ">
+                    <span> 0021 0021 MIGUEL ANGEL ROSETE BUSTA 547718759 </span>
+                    <span style="padding-left: 50px;"> LíneaGNP5552279000,gnp.com.mx </span>
+                    <span style="padding-left: 200px;"> HX42 VENTA MASIVA </span>
+                </div>
+            </div>
+
+
+
+            <div class="header">
+                <img src="https://logowik.com/content/uploads/images/gnp-seguros7977.logowik.com.webp" alt="GNP Logo"
+                    height="80px" style="padding:0; margin:0; margin-left: -10px;" />
+            </div>
+            <div class="title" style="padding-left: 20px;">CONTRATANTE</div>
+            <div class="content" style="margin-top:-20px;">
+                <div class="section">
+                    <div class="left" style="width: 75%; min-width: 75%; max-width: 75%">
+                        <table>
+                            <tr class="header-row">
+                                <td colspan="2">Nombre</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">{{name}}</td>
+                            </tr>
+                            </tr>
+                            <tr class="header-row">
+                                <td>Código de Cliente</td>
+                                <td>Forma de Pago / Moneda</td>
+                            </tr>
+                            <tr>
+                                <td>0127011538</td>
+                                <td>Mensual &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Nacional</td>
+                            </tr>
+                            <tr class="header-row">
+                                <td colspan="2">Concepto DAÑOS / MI MASCOTA GNP</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="right" style="padding-left:25px; width: 65%; min-width: 65%; max-width: 65%">
+                        <table>
+                            <tr class=" header-row">
+                                <td style="max-width: 50%;">Parcialidad</td>
+                                <td>Versión</td>
+                            </tr>
+                            <tr>
+                                <td>12</td>
+                                <td>0</td>
+                            </tr>
+                            <tr class="header-row">
+                                <td>No. de Póliza</td>
+                                <td>Referencia</td>
+                            </tr>
+                            <tr>
+                                <td>547718759</td>
+                                <td>Sin Referencia</td>
+                            </tr>
+                            <tr class="header-row">
+                                <td colspan="2">Periodo que cubre
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    Día &nbsp;&nbsp; Mes &nbsp;&nbsp;
+                                    Año</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">Desde
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    &nbsp;&nbsp;&nbsp;{{fromDate}} &nbsp;&nbsp;&nbsp;&nbsp; {{fromMonth}}
+                                    &nbsp;&nbsp;&nbsp;&nbsp;
+                                    {{fromYear}}</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">Hasta
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    &nbsp;&nbsp;&nbsp; {{tillDate}} &nbsp;&nbsp;&nbsp;&nbsp; {{tillMonth}}
+                                    &nbsp;&nbsp;&nbsp;&nbsp; {{tillYear}}</td>
+                            </tr>
+                            <tr class="header-row">
+                                <td colspan="2" class="title" style="padding-left: 20px;">Importe a Pagar</td>
+                            <tr style="border-left: none; background-color: rgba(50, 134, 245, 0.253);"
+                                class="header-row">
+                                <td style="border-right: none; font-weight: bold;">Importe por Pagar
+                                </td>
+                                <td style="border-left: none; font-weight: bold;" class="total-amount">
+                                    ${{totalAmountToPay}}</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div style="width: 65%; padding-left:17px;">
+                <div class="title" style="padding-left: 20px;">Referencia Bancaria</div>
+                <table class="custom-border" style="font-size: 10px;">
+                    <tr class="header-row">
+                        <th>Banamex</th>
+                        <th>B</th>
+                        <th></th>
+                        <th></th>
+                        <th>8167 0182 3119 2831 1041 6432 02</th>
+                    </tr>
+                    <tr class="header-row">
+                        <th>HSBC</th>
+                        <th>RAP</th>
+                        <th>000825</th>
+                        <th>REF</th>
+                        <th>8231 1928 3110 4164 3247</th>
+                    </tr>
+                    <tr class="header-row">
+                        <th>Scotiabank</th>
+                        <th>CTE</th>
+                        <th>003932</th>
+                        <th>REF</th>
+                        <th>8231 1928 3110 9000 3291</th>
+                    </tr>
+                    <tr class="header-row">
+                        <th>BBVA Bancomer</th>
+                        <th>CIE</th>
+                        <th>1251929</th>
+                        <th>REF</th>
+                        <th>8231 1928 3110 3792 3203</th>
+                    </tr>
+                    <tr class="header-row">
+                        <th>Banorte</th>
+                        <th>EMP</th>
+                        <th>002581</th>
+                        <th>REF</th>
+                        <th>8231 1928 3110 4164 3247</th>
+                    </tr>
+                </table>
+            </div>
+            <div style="padding-left: 30px; padding-bottom:50px; opacity: 70%; margin-top: -3px;">
+                Cuenta Única de Cobranza
+            </div>
+        </div>
+
+
+
+        <div class="page" style="padding-left: 10px;">
+            <div style="border-bottom: 1px dotted #000;">
+                <div class="header">
+                    <img src="https://logowik.com/content/uploads/images/gnp-seguros7977.logowik.com.webp"
+                        alt="GNP Logo" height="80px" style="padding:0; margin:0; margin-left: -10px;" />
+                </div>
+
+                <div style="font-size: 14px; color:rgb(62, 65, 74);">
+                    "Éste documento es sólo válido si presenta cualquier elemento que compruebe que el pago fue
+                    efectuado y recibido efectivamente por la Institución bancaria de que se trate o por Grupo Nacional
+                    Provincial en su caso. Si el pago se efectúa con cheque, éste será recibido salvo buen cobro y
+                    deberá expedirse a nombre de Grupo Nacional Provincial S.A.B. Este recibo pertenece a una serie por
+                    lo que el pago deberá hacerse en ese estricto orden. Conserve este comprobante para cualquier
+                    aclaración"
+                </div>
+
+                <div style="font-size: 14px; padding-top: 150px; color:rgb(62, 65, 74);">
+                    Lugar de Expedición:
+                    <br />AVENIDA CERRO DE LAS TORRES No. 395, MÉXICO, COYOACÁN,
+                    <br />CIUDAD DEMÉXICO, C.P. 04200
+                </div>
+
+
+                <div style="font-size: 15px; padding-bottom: 10px;">
+                    <table style="width: 100%;">
+                        <tr class="header-row">
+                            <td>Clave</td>
+                            <td>Agente</td>
+                        </tr>
+                        <tr>
+                            <td>0016291001 </td>
+                            <td>GRUPO NACIONAL PROVINCIAL, S.A.B. </td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div
+                    style="font-weight: bold; font-size: 13px; text-align:center; justify-content:center; padding-bottom: 10px;">
+                    Documento informativo sin validez fiscal. Recupere su Comprobante Fiscal Digital por Internet (CFDI)
+                    en gnp.com.mx en la sección "Soy Cliente" o a travésde su Intermediario de Seguros.
+                </div>
+
+                <div style="font-size: 13px;">
+                    Si usted realiza el pago de su prima de seguros en efectivo a través de su agente, se le sugiere
+                    solicitarle al mismo anote nombre, fecha y firma en este documento y solicítele la ficha de depósito
+                    para respaldar el pago.
+                </div>
+
+                <div style="padding-top: 25px; font-size: smaller; color:gray ">
+                    <span> Línea GNP55 52279000, gnp.com.mx </span>
+                </div>
+            </div>
+
+            <div>
+                <div class="header">
+                    <img src="https://logowik.com/content/uploads/images/gnp-seguros7977.logowik.com.webp"
+                        alt="GNP Logo" height="80px" style="padding:0; margin:0; margin-left: -10px;" />
+                </div>
+
+                <div style="font-size: 15px; padding-bottom: 10px; padding-top: 350px;">
+                    <table style="width: 100%;">
+                        <tr class="header-row">
+                            <td>Clave</td>
+                            <td>Agente</td>
+                        </tr>
+                        <tr>
+                            <td>0016291001 </td>
+                            <td>GRUPO NACIONAL PROVINCIAL, S.A.B. </td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div
+                    style="font-weight: bold; font-size: 13px; text-align:center; justify-content:center; padding-bottom: 10px;">
+                    Documento informativo sin validez fiscal. Recupere su Comprobante Fiscal Digital por Internet (CFDI)
+                    en gnp.com.mx en la sección "Soy Cliente" o a travésde su Intermediario de Seguros.
+                </div>
+                <div style="padding-top: 25px; font-size: smaller; color:gray ">
+                    <span> Línea GNP55 52279000, gnp.com.mx </span>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+        <div class="page">
+            <div>
+                <div class="header">
+                    <img src="https://logowik.com/content/uploads/images/gnp-seguros7977.logowik.com.webp"
+                        alt="GNP Logo" height="80px" style="padding:0; margin:0; margin-left: -10px;" />
+                </div>
+                <div class="title" style="padding-left: 20px;">CONTRATANTE</div>
+                <div
+                    style="margin-top:-20px; font-size: 14px; width: 100%; display: flex; justify-content: space-between;">
+                    <div style="display:flex; font-size: 13px;">
+                        <div class="left" style="min-width: 65%;">
+                            <table style="width: 100%;">
+                                <tr class="header-row">
+                                    <td colspan="2">Nombre</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">{{name}}</td>
+                                </tr>
+                                <tr class="header-row">
+                                    <td colspan="2">Dirección</td>
+                                <tr>
+                                    <td colspan="2">{{address}}
+                                    </td>
+                                </tr>
+                                </tr>
+                                <tr class="header-row">
+                                    <td style="width: 50%;">RFC</td>
+                                    <td>{{rcf}}</td>
+                                </tr>
+                                <tr>
+                                    <td>GARR980106MA0</td>
+                                    <td>0127011538</td>
+                                </tr>
+                                <tr class="header-row">
+                                    <td>Forma de Pago</td>
+                                    <td>Conducto de Pago</td>
+                                </tr>
+                                <tr>
+                                    <td>Mensual</td>
+                                    <td>Intermediario</td>
+                                </tr>
+                                <tr class="header-row">
+                                    <td>Concepto</td>
+                                    <td>Moneda</td>
+                                </tr>
+                                <tr>
+                                    <td>DAÑOS / MI MASCOTA GNP</td>
+                                    <td>Nacional</td>
+                                </tr>
+                                <tr class="header-row">
+                                    <td colspan="2"> </td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <div class="right" style="min-width: 55%; padding-left: 15px; justify-content:right;">
+                            <table style="border-collapse: collapse; min-width: 100%;">
+                                <tr class="header-row">
+                                    <td style="max-width: 50%;">Parcialidad</td>
+                                    <td>Versión</td>
+                                </tr>
+                                <tr>
+                                    <td>12</td>
+                                    <td>0</td>
+                                </tr>
+                                <tr class="header-row">
+                                    <td>No. de Póliza</td>
+                                    <td>Referencia</td>
+                                </tr>
+                                <tr>
+                                    <td>547718759</td>
+                                    <td>Sin Referencia</td>
+                                </tr>
+                                <tr class="header-row">
+                                    <td colspan="2">Periodo que cubre
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        Día &nbsp;&nbsp; Mes &nbsp;&nbsp;
+                                        Año</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">Desde
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        &nbsp;&nbsp;&nbsp;{{ fromDate }} &nbsp;&nbsp;&nbsp;&nbsp; {{ fromMonth }}
+                                        &nbsp;&nbsp;&nbsp;&nbsp; {{ fromYear }}
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">Hasta
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        &nbsp;&nbsp;&nbsp; {{ tillDate }} &nbsp;&nbsp;&nbsp;&nbsp; {{ tillMonth }}
+                                        &nbsp;&nbsp;&nbsp;&nbsp; {{ tillYear }}
+                                    </td>
+                                </tr>
+                                <tr class="header-row">
+                                    <td colspan="2" class="title" style="padding-left: 20px;">Importe a Pagar</td>
+                                </tr>
+                                <tr>
+                                    <td style="border-right: none;">Prima Neta</td>
+                                    <td style="border-left: none;" class="total-amount">${{premiumTotal}}</td>
+                                </tr>
+                                <tr>
+                                    <td style="border-right: none;">Recargo Pago Fraccionado</td>
+                                    <td style="border-left: none;" class="total-amount">${{paymentSurcharge}}</td>
+                                </tr>
+                                <tr>
+                                    <td style="border-right: none;">Derecho de Póliza</td>
+                                    <td style="border-left: none;" class="total-amount">${{policyPayment}}</td>
+                                </tr>
+                                <tr>
+                                    <td style="border-right: none;">I.V.A.</td>
+                                    <td style="border-left: none;" class="total-amount">${{tax}}</td>
+                                </tr>
+                                <tr style="border-left: none;" class="header-row">
+                                    <td style="border-right: none; font-weight: bold;">Importe por Pagar</td>
+                                    <td style="border-left: none; font-weight: bold;" class="total-amount">
+                                        ${{totalAmountToPay}}</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div style="margin-top: -100px; padding-left: 30px; opacity: 70%; margin-top: -3px;">Cuenta Única de
+                    Cobranza
+                </div>
+
+                <div
+                    style="padding-top: 250px; margin-bottom:550px;; border-bottom: 1px dotted #000; font-size: smaller; color:gray ">
+                    <span> 0021 0021 MIGUEL ANGEL ROSETE BUSTA 547718759 </span>
+                    <span style="padding-left: 50px;"> LíneaGNP5552279000,gnp.com.mx </span>
+                    <span style="padding-left: 200px;"> HX42 VENTA MASIVA </span>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+        <div class="page">
+            <div style="">
+                <div class="header">
+                    <img src="https://logowik.com/content/uploads/images/gnp-seguros7977.logowik.com.webp"
+                        alt="GNP Logo" height="80px" style="padding:0; margin:0; margin-left: -10px;" />
+                </div>
+
+                <div style="font-size: 15px; padding-bottom: 10px; padding-top: 200px;">
+                    <table style="width: 100%;">
+                        <tr class="header-row">
+                            <td>Clave</td>
+                            <td>Agente</td>
+                        </tr>
+                        <tr>
+                            <td>0016291001 </td>
+                            <td>GRUPO NACIONAL PROVINCIAL, S.A.B. </td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div
+                    style="font-weight: bold; font-size: 13px; text-align:center; justify-content:center; padding-bottom: 10px;">
+                    Documento informativo sin validez fiscal. Recupere su Comprobante Fiscal Digital por Internet (CFDI)
+                    en gnp.com.mx en la sección "Soy Cliente" o a travésde su Intermediario de Seguros.
+                </div>
+
+            </div>
+
+
+        </div>
+
+</body>
+
+</html>

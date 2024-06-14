@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://themes.googleusercontent.com/fonts/css?kit=Lx1xfUTR4qFjwg0Z_pb901bqibjAC9TcrSzAoXtxa2E"
+        rel="stylesheet">
+    <title>New Policy</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.4;
+            font-size: 14px;
+        }
+
+        table {
+            padding-left: 50px;
+            width: 500px;
+            display: block;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        .content {
+            margin: 20px 0;
+        }
+
+        .footer {
+            padding: 10px 0;
+            font-size: 10px;
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="content">
+            <p>Dear {{first_name}},</p>
+            <p>Congratulations on protecting your cherished valuables with a ONCE policy!</p>
+            <p>Your coverage is now active and you can enjoy peace of mind knowing that your treasured items are
+                protected.</p>
+            <p>Below is a summary of your coverage details:</p>
+            <table>
+                <tr>
+                    <td>Policy Number:</td>
+                    <td style="padding-left: 15px;">{{policy_number}}</td>
+                </tr>
+                <tr>
+                    <td>Item(s) Covered:</td>
+                    <td style="padding-left: 15px;">{{items_covered}}</td>
+                </tr>
+                <tr>
+                    <td>Coverage Amount:</td>
+                    <td style="padding-left: 15px;">{{coverage_amount}}</td>
+                </tr>
+                <tr>
+                    <td>Premium:</td>
+                    <td style="padding-left: 15px;">{{premium}}</td>
+                </tr>
+                <tr>
+                    <td>Coverage Term:</td>
+                    <td style="padding-left: 15px;">5 years</td>
+                </tr>
+            </table>
+            <p>You can access your policy documents, manage your account, or file a claim by visiting our policyholder
+                portal at <a href="{{portal_link}}">{{portal_link}}</a>.</p>
+            <p>If you have any questions or need assistance, our dedicated customer support team is here to help. You
+                can reach our customer service team at <a
+                    href="mailto:info@onceinsurance.com">info@onceinsurance.com</a>.</p>
+            <p>Thank you for choosing ONCE to safeguard your valued possessions. We look forward to serving you and
+                providing you with exceptional service throughout your coverage term.</p>
+            <p>Best,<br>The ONCE Team</p>
+        </div>
+        <div class="footer">
+            <p><b>Electronic delivery notice:</b> You agreed to the electronic delivery of your documents, and you have
+                received this email with the digital copy of your policy. If you would like to receive your policy in
+                the mail, please reach out to us at <a href="mailto:info@onceinsurance.com">info@onceinsurance.com</a>
+                and we will send you a paper copy of your policy.</p>
+            <p><b>Disclaimer:</b> Insurance coverage is offered through Brokery LLC (“Brokery”), a licensed insurance
+                producer.
+                ONCE INSURANCE is the product, trade, and service name of the coverages. Coverage is offered and
+                administered by Brokery LLC (Brokery) and is underwritten by AM Specialty Insurance Company, an
+                Arizona-domiciled surplus lines insurance company headquartered at 1717 Main St. Suite 2650, Dallas, TX
+                75201.</p>
+        </div>
+    </div>
+</body>
+
+</html>
