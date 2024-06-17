@@ -5,8 +5,10 @@ const handlebars = require("handlebars");
 const path = require("path");
 // const mime = require("mime");
 
+const templateSource = fs.readFileSync("onceCompleteTemplate.hbs", "utf-8");
+// const templateSource = fs.readFileSync("test1.hbs", "utf-8");
 // const templateSource = fs.readFileSync("paramountCocIssue.hbs", "utf8");
-const templateSource = fs.readFileSync("onceCoverageDocument.hbs", "utf8");
+// const templateSource = fs.readFileSync("onceCoverageDocument.hbs", "utf8");
 // const templateSource = fs.readFileSync("oncePolicyTemplate.hbs", "utf8");
 // const templateSource = fs.readFileSync("oncePolicyEmail.hbs", "utf8");
 // const templateSource = fs.readFileSync("onceServiceSuiteTemplate.hbs", "utf8");
@@ -30,8 +32,16 @@ app.listen(8080, () => {
   console.log("app listening on 8080");
 });
 
+function getImageBase64(filePath) {
+  const image = fs.readFileSync(filePath);
+  return `data:image/png;base64,${image.toString("base64")}`;
+}
+
 app.get("/document", async (req, res) => {
   const template = handlebars.compile(templateSource);
+  const imagePath = path.join(__dirname, "images", "once-logo.png");
+
+  fs.writeFileSync("imageB64.txt", getImageBase64(imagePath));
 
   let data = {
     insurer_name: "Tony Stark",
@@ -45,6 +55,7 @@ app.get("/document", async (req, res) => {
     insured_value: "$ 1,000",
     premium: "$ 200",
     deductible: "$ 0",
+    imageBase64: getImageBase64(imagePath),
   };
 
   const html = template(data);
@@ -63,7 +74,9 @@ app.get("/document", async (req, res) => {
 
   const browser = await puppeteer.launch(puppeteerConfig);
   const page = await browser.newPage();
-  await page.setContent(html);
+  await page.setContent(html, {
+    waitUntil: "domcontentloaded",
+  });
   // await page.waitForSelector("img");
   // await page.screenshot({ path: "screenshot.png" });
 
