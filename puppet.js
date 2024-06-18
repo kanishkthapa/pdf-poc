@@ -5,7 +5,6 @@ const handlebars = require("handlebars");
 const path = require("path");
 // const mime = require("mime");
 
-<<<<<<< HEAD
 //const templateSource = fs.readFileSync("ALSurplusLinesNotice.hbs", "utf8");
 //const templateSource = fs.readFileSync("AKSurplusLinesNotice.hbs", "utf8");
 //const templateSource = fs.readFileSync("AZSurplusLinesNotice.hbs", "utf8");
@@ -55,22 +54,17 @@ const path = require("path");
 //const templateSource = fs.readFileSync("WASurplusLinesNotice.hbs", "utf8");
 //const templateSource = fs.readFileSync("WVSurplusLinesNotice.hbs", "utf8");
 //const templateSource = fs.readFileSync("WISurplusLinesNotice.hbs", "utf8");
-const templateSource = fs.readFileSync("WYSurplusLinesNotice.hbs", "utf8");
-
+// const templateSource = fs.readFileSync("WYSurplusLinesNotice.hbs", "utf8");
 // const templateSource = fs.readFileSync("paramountCocIssue.hbs", "utf8");
 //const templateSource = fs.readFileSync("onceCoverageDocument.hbs", "utf8");
-
 //const templateSource = fs.readFileSync("onceCompleteTemplate.hbs", "utf-8");
 // const templateSource = fs.readFileSync("test1.hbs", "utf-8");
 // const templateSource = fs.readFileSync("paramountCocIssue.hbs", "utf8");
 // const templateSource = fs.readFileSync("onceCoverageDocument.hbs", "utf8");
-
-=======
 const templateSource = fs.readFileSync("onceCompleteTemplate.hbs", "utf-8");
 // const templateSource = fs.readFileSync("test1.hbs", "utf-8");
 // const templateSource = fs.readFileSync("paramountCocIssue.hbs", "utf8");
 // const templateSource = fs.readFileSync("onceCoverageDocument.hbs", "utf8");
->>>>>>> c36de38e0f40cb2cb44d22305905dcf641813763
 // const templateSource = fs.readFileSync("oncePolicyTemplate.hbs", "utf8");
 // const templateSource = fs.readFileSync("oncePolicyEmail.hbs", "utf8");
 //const templateSource = fs.readFileSync("onceServiceSuiteTemplate.hbs", "utf8");
