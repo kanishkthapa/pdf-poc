@@ -68,7 +68,7 @@ app.get("/document", async (req, res) => {
     premium: "$ 200",
     deductible: "$ 0",
     imageBase64: getImageBase64(imagePath),
-    state: "AK",
+    state: "NH",
   };
 
   const html = template(data);
