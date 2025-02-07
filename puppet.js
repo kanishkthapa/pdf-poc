@@ -5,7 +5,7 @@ const handlebars = require("handlebars");
 const path = require("path");
 // const mime = require("mime");
 
-const templateSource = fs.readFileSync("onceFinalTemplate.hbs", "utf-8");
+// const templateSource = fs.readFileSync("onceFinalTemplate.hbs", "utf-8");
 // const templateSource = fs.readFileSync("onceCompleteTemplate.hbs", "utf-8");
 // const templateSource = fs.readFileSync("test1.hbs", "utf-8");
 // const templateSource = fs.readFileSync("paramountCocIssue.hbs", "utf8");
@@ -13,7 +13,7 @@ const templateSource = fs.readFileSync("onceFinalTemplate.hbs", "utf-8");
 // const templateSource = fs.readFileSync("oncePolicyTemplate.hbs", "utf8");
 // const templateSource = fs.readFileSync("oncePolicyEmail.hbs", "utf8");
 //const templateSource = fs.readFileSync("onceServiceSuiteTemplate.hbs", "utf8");
-// const templateSource = fs.readFileSync("onceSignaturePage.hbs", "utf8");
+const templateSource = fs.readFileSync("onceSignaturePage.hbs", "utf8");
 // const templateSource = fs.readFileSync("gnpWelcomeKit.hbs", "utf8");
 // const templateSource = fs.readFileSync("modifyGnp.hbs", "utf8");
 // const templateSource = fs.readFileSync("gnp.hbs", "utf8");
