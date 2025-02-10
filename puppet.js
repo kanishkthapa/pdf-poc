@@ -4,13 +4,8 @@ const puppeteer = require("puppeteer");
 const handlebars = require("handlebars");
 const path = require("path");
 // const mime = require("mime");
-<<<<<<< HEAD
-const templateSource = fs.readFileSync("work1.hbs","utf-8");
-//const templateSource = fs.readFileSync("onceFinalTemplate.hbs", "utf-8");
-=======
 
 // const templateSource = fs.readFileSync("onceFinalTemplate.hbs", "utf-8");
->>>>>>> 2be5ee5d23b99cb3d2a5db810350504cdd25dc21
 // const templateSource = fs.readFileSync("onceCompleteTemplate.hbs", "utf-8");
 // const templateSource = fs.readFileSync("test1.hbs", "utf-8");
 // const templateSource = fs.readFileSync("paramountCocIssue.hbs", "utf8");
