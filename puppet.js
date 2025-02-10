@@ -4,8 +4,13 @@ const puppeteer = require("puppeteer");
 const handlebars = require("handlebars");
 const path = require("path");
 // const mime = require("mime");
+<<<<<<< HEAD
 const templateSource = fs.readFileSync("work1.hbs","utf-8");
 //const templateSource = fs.readFileSync("onceFinalTemplate.hbs", "utf-8");
+=======
+
+// const templateSource = fs.readFileSync("onceFinalTemplate.hbs", "utf-8");
+>>>>>>> 2be5ee5d23b99cb3d2a5db810350504cdd25dc21
 // const templateSource = fs.readFileSync("onceCompleteTemplate.hbs", "utf-8");
 // const templateSource = fs.readFileSync("test1.hbs", "utf-8");
 // const templateSource = fs.readFileSync("paramountCocIssue.hbs", "utf8");
@@ -13,7 +18,7 @@ const templateSource = fs.readFileSync("work1.hbs","utf-8");
 // const templateSource = fs.readFileSync("oncePolicyTemplate.hbs", "utf8");
 // const templateSource = fs.readFileSync("oncePolicyEmail.hbs", "utf8");
 //const templateSource = fs.readFileSync("onceServiceSuiteTemplate.hbs", "utf8");
-// const templateSource = fs.readFileSync("onceSignaturePage.hbs", "utf8");
+const templateSource = fs.readFileSync("onceSignaturePage.hbs", "utf8");
 // const templateSource = fs.readFileSync("gnpWelcomeKit.hbs", "utf8");
 // const templateSource = fs.readFileSync("modifyGnp.hbs", "utf8");
 // const templateSource = fs.readFileSync("gnp.hbs", "utf8");
