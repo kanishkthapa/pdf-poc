@@ -4,8 +4,8 @@ const puppeteer = require("puppeteer");
 const handlebars = require("handlebars");
 const path = require("path");
 // const mime = require("mime");
-
-const templateSource = fs.readFileSync("onceFinalTemplate.hbs", "utf-8");
+const templateSource = fs.readFileSync("work1.hbs","utf-8");
+//const templateSource = fs.readFileSync("onceFinalTemplate.hbs", "utf-8");
 // const templateSource = fs.readFileSync("onceCompleteTemplate.hbs", "utf-8");
 // const templateSource = fs.readFileSync("test1.hbs", "utf-8");
 // const templateSource = fs.readFileSync("paramountCocIssue.hbs", "utf8");
@@ -59,6 +59,8 @@ app.get("/document", async (req, res) => {
     insurer_name: "Tony Stark",
     location_address: "Block Top",
     location_street: "Stark Tower",
+    plan_name: "ER CARE CHOICE ",
+    benefit_limit:"PHP 50,000.00",
     location_city: "NYC",
     location_zip: "09420",
     issue_date: "2024-05-05",
@@ -67,6 +69,7 @@ app.get("/document", async (req, res) => {
     insured_value: "$ 1,000",
     premium: "$ 200",
     deductible: "$ 0",
+    voucher_code: "ABCD1234EFGH5678",
     imageBase64: getImageBase64(imagePath),
     state: "NH",
   };
